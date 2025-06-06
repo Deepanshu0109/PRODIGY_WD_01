@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, white, greenyellow);
+
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+nav a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, rgb(0, 224, 0), greenyellow, yellow);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav a {
+    transition: 0.3s;
+}
+
+nav a:hover {
+    scale: 1.1;
+    color: #ccc;
+    transform: translateY(-2px);
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.home {
+    display: flex;
+    border-bottom: 5px solid black;
+    margin-top: 12px;
+}
+
+#p1 {
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 170px 0 0 80px;
+    filter: drop-shadow(10px 10px 10px black);
+}
+
+.catalog {
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    position: relative;
+}
+
+.items {
+    display: flex;
+}
+
+.items img:hover {
+    transform: scale(1.1);
+
+}
+
+.items img {
+    width: 25%;
+    height: auto;
+    margin: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.imageContainer {
+    position: relative;
+    width: 300px;
+    height: 500px;
+}
+
+@keyframes appearLeftToRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.BGanimate {
+    animation: appearLeftToRight 1s;
+}
+
+#displayBG {
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 0 50% 0 0;
+    background: #50C878;
+    box-shadow: 7px 1px 30px black;
+    border-top: solid 4px black;
+    border-right: solid 4px black;
+    border-bottom: solid 4px black;
+    border-left: solid 0px black;
+
+}
+
+#displayBG2 {
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    border-radius: 0 50% 0 0;
+    background: #50C878;
+    border-top: solid 4px black;
+    border-right: solid 4px black;
+    border-bottom: solid 4px black;
+    border-left: solid 0px black;
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.bottleAnimate {
+    animation: drop 1s ease-in-out;
+}
+
+#p1 {
+
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.content p {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 4rem;
+    color: rgb(153, 255, 0);
+    text-shadow: 5px 5px 10px black;
+    margin-bottom: 20px;
+}
+
+.content h4 {
+    font-size: 2rem;
+    color: green;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.content h1,
+h4,
+p {
+    font-family: cursive;
+    margin: 20px;
+}
