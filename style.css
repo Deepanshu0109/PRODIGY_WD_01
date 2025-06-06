@@ -9,7 +9,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, white, greenyellow);
+    background: linear-gradient(70deg,#50C878, palevioletred, greenyellow);
 
 }
 
@@ -46,7 +46,7 @@ nav a::after {
     bottom: -2px;
     width: 0;
     height: 2px;
-    background: linear-gradient(to right, rgb(0, 224, 0), greenyellow, yellow);
+    background: linear-gradient(to right, rgb(0, 224, 0), palevioletred, gold);
     transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -108,6 +108,7 @@ nav a:hover::after {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
+    background: linear-gradient(70deg,#50C878, greenyellow);
 }
 
 .imageContainer {
@@ -187,29 +188,31 @@ nav a:hover::after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
-}
-
-.content p {
-    text-align: center;
+    margin-top: 50px;
 }
 
 .content h1 {
     font-size: 4rem;
-    color: rgb(153, 255, 0);
+    color: #50C878;
     text-shadow: 5px 5px 10px black;
     margin-bottom: 20px;
+
 }
 
 .content h4 {
     font-size: 2rem;
-    color: green;
+    color: goldenrod;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 2px black;
 }
 
 .content p {
+    text-align: center;
     font-size: 1.5rem;
     line-height: 1.5;
+    color: gold;
+    text-shadow: 2px 2px 2px black;
+
 }
 
 .content h1,
