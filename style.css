@@ -9,15 +9,22 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(70deg,#50C878, palevioletred, greenyellow);
+}
 
+.home {
+    background: linear-gradient(70deg, #50C878, palevioletred, greenyellow);
 }
 
 header {
+    position: sticky;
+    top:0;
+    z-index: 1000;
     width: 100%;
-    height: 10vh;
-    background-color: #333;
-    color: white;
+    height: auto;
+    background-color: transparent;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 4px 10px black;
+    border: 1px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,11 +36,11 @@ nav {
     gap: 20px;
     font-size: 1rem;
     cursor: pointer;
+    padding: 20px 0px;
 }
 
 nav a {
     font-size: 1.5rem;
-    color: white;
     text-decoration: none;
     position: relative;
     transition: color 0.3s;
@@ -56,7 +63,7 @@ nav a {
 
 nav a:hover {
     scale: 1.1;
-    color: #ccc;
+    color: rgb(67, 67, 67);
     transform: translateY(-2px);
 }
 
@@ -65,10 +72,9 @@ nav a:hover::after {
     left: 0;
 }
 
-.home {
+.homeSpace {
     display: flex;
     border-bottom: 5px solid black;
-    margin-top: 12px;
 }
 
 #p1 {
@@ -102,13 +108,13 @@ nav a:hover::after {
 .items img {
     width: 25%;
     height: auto;
-    margin: 10px;
+    margin: 20px 10px;
     border: 2px solid black;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
-    background: linear-gradient(70deg,#50C878, greenyellow);
+    background: linear-gradient(70deg, #50C878, greenyellow);
 }
 
 .imageContainer {
@@ -144,8 +150,6 @@ nav a:hover::after {
     border-top: solid 4px black;
     border-right: solid 4px black;
     border-bottom: solid 4px black;
-    border-left: solid 0px black;
-
 }
 
 #displayBG2 {
@@ -158,7 +162,6 @@ nav a:hover::after {
     border-top: solid 4px black;
     border-right: solid 4px black;
     border-bottom: solid 4px black;
-    border-left: solid 0px black;
 }
 
 @keyframes drop {
@@ -188,7 +191,7 @@ nav a:hover::after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .content h1 {
@@ -221,3 +224,71 @@ p {
     font-family: cursive;
     margin: 20px;
 }
+
+.new h1 {
+    text-align: center;
+    Margin: 20px;
+    font-size: 4rem;
+}
+.new {
+    width: 100%;
+    height: 100vh;
+
+}
+.newContainer {
+    width: 100%;
+    border-top: 7px black solid;
+    border-bottom: 7px black solid;
+    padding: 20px;
+    margin: 20px 0px;
+    box-shadow: 0px 0px 10px black;
+    background: transparent;
+    backdrop-filter: blur(25px);
+}
+@keyframes appearRightToLeft {
+    from {
+        transform: translateX(60%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.newCard1 {
+    animation: appearRightToLeft 2s ease-out;
+    animation-timeline: view();
+    animation-range: 0% cover 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.newItem img {
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 50px 0px;
+    box-shadow: 0px 0px 10px black;
+    filter: drop-shadow(7px 7px 10px black);
+}
+.newCard2 {
+    animation: appearLeftToRight 1s;
+    animation-timeline: view();
+    animation-range: 0% cover 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.newItem2 img {
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 0px 50px;
+    box-shadow: 0px 0px 10px black;
+    filter: drop-shadow(7px 7px 7px black);
+}
+.newCard h1 {
+    font-size: 3rem;
+}
+
