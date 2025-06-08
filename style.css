@@ -12,8 +12,9 @@ body {
   background: palevioletred;
 }
 
-.home {
+#home {
   background: url(images/homebg.jpg);
+  background-size: cover;
 }
 
 header {
@@ -32,6 +33,14 @@ header {
   padding: 0 20px;
 }
 
+#logo {
+  width: 50px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  filter: drop-shadow(5px 5px 10px black);
+}
+
 nav {
   display: flex;
   gap: 20px;
@@ -41,11 +50,13 @@ nav {
 }
 
 nav a {
+  color: #1a1a40;
+  text-shadow: 2px 2px 2px rgb(248, 83, 110);
   font-weight: bold;
   font-size: 1.5rem;
   text-decoration: none;
   position: relative;
-  transition: color 0.3s;
+  transition: all 0.3s;
 }
 
 nav a::after {
@@ -55,17 +66,15 @@ nav a::after {
   bottom: -2px;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, rgb(0, 224, 0), palevioletred, gold);
+  background: linear-gradient(to right, white, pink);
   transition: width 0.3s ease, left 0.3s ease;
 }
 
-nav a {
-  transition: 0.3s;
-}
 
 nav a:hover {
-  scale: 1.1;
-  color: rgb(67, 67, 67);
+  transform: scale(1.1) translateY(-2px);
+  color: #d81b60;
+  text-shadow: 0px 0px 10px pink;
   transform: translateY(-2px);
 }
 
@@ -115,6 +124,10 @@ nav a:hover::after {
   cursor: pointer;
   transition: transform 0.3s ease;
   background: radial-gradient(white, palevioletred);
+}
+
+nav a, .items img {
+  will-change: transform;
 }
 
 .imageContainer {
@@ -190,24 +203,30 @@ nav a:hover::after {
 
 .content h1 {
   font-size: 4rem;
-  color: #50c878;
-  text-shadow: 5px 5px 10px black;
+  color: rgb(248, 83, 110);
+  text-shadow:
+    0 0 5px black,
+    0 0 10px rgb(248, 83, 110),
+    0 0 20px rgb(248, 83, 110),
+    0 0 40px rgba(248, 83, 110, 0.6),
+    0 0 80px rgba(248, 83, 110, 0.3);
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
 .content h4 {
   font-size: 2rem;
-  color: goldenrod;
+  color: #1a1a40;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 2px rgb(248, 83, 110);
 }
 
 .content p {
   text-align: center;
   font-size: 1.5rem;
   line-height: 1.5;
-  color: gold;
-  text-shadow: 2px 2px 2px black;
+  color: #1a1a40;
+  text-shadow: 2px 2px 2px rgb(248, 83, 110);
 }
 
 .content h1,
@@ -216,7 +235,7 @@ p {
   margin: 20px;
 }
 
-.new {
+#new {
   width: 100%;
   height: 100vh;
   border-bottom: 10px solid black;
@@ -224,10 +243,20 @@ p {
   background-size: cover;
 }
 
-.new h1 {
+#new h1 {
   text-align: center;
   margin: 20px;
   font-size: 4rem;
+  color: #1a1a40;
+  text-shadow: 2px 2px 2px rgb(248, 83, 110);
+}
+
+#new h2 {
+  text-align: center;
+  margin: 20px;
+  font-size: 3rem;
+  color: #1a1a40;
+  text-shadow: 2px 2px 2px rgb(248, 83, 110);
 }
 
 .newContainer {
@@ -293,19 +322,20 @@ p {
   font-size: 3rem;
 }
 
-.ourStory {
+#ourStory {
   width: 100%;
   height: 100vh;
-  background: url(images/story\ bg.jpg);
+  background: url(images/storybg.jpg);
   background-size: cover;
   border-bottom: 10px solid black;
 }
 
-.ourStory h1 {
+#ourStory h1 {
   text-align: center;
   margin: 20px;
   font-size: 4rem;
-  color: black;
+  color: #1a1a40;
+  text-shadow: 2px 2px 2px rgb(248, 83, 110);
 }
 
 .storyContainer {
@@ -366,10 +396,10 @@ p {
 }
 
 .storyText p {
-  font-weight: bolder;
+  font-weight: bold;
   text-align: center;
   font-size: 1.7rem;
-  color: rgb(0, 187, 116);
+  color: #d81b60;
   text-shadow: 2px 2px 2px black;
   margin: 20px;
 }
@@ -383,12 +413,15 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-bottom: 10px solid black;
 }
 
 .testimonials h1 {
   text-align: center;
   margin: 20px;
   font-size: 4rem;
+  color: #1a1a40;
+  text-shadow: 2px 2px 2px rgb(248, 83, 110);
 }
 
 .tContainer {
@@ -419,7 +452,6 @@ p {
   box-shadow: 0px 0px 10px black;
 }
 
-/* card animation popping from pfp to full size */
 @keyframes popFromPFP {
   0% {
     transform: scale(0);
@@ -465,6 +497,8 @@ p {
 .CTAbutton h1 {
   font-size: 2rem;
   margin: 20px;
+  color: #1a1a40;
+  text-shadow: 2px 2px 2px rgb(248, 83, 110);
 }
 
 .CTAbutton button {
@@ -475,12 +509,118 @@ p {
   color: white;
   background: rgb(255, 133, 174);
   cursor: pointer;
-  box-shadow: 0px 0px 30px rgb(248, 138, 157);
-  transition: all 0.5s ease;
+  box-shadow:
+    0 0 5px black,
+    0 0 10px rgb(248, 83, 110),
+    0 0 20px rgb(248, 83, 110),
+    0 0 40px rgba(248, 83, 110, 0.5),
+    0 0 80px rgba(248, 83, 110, 0.3);
+  text-shadow: 0 0 5px white;
+  transition: all 0.4s ease;
 }
 
 .CTAbutton button:hover {
   background: rgb(255, 166, 181);
-  box-shadow: 0px 0px 30px rgb(248, 138, 157);
-  transform: scale(1.2);
+  box-shadow:
+    0 0 10px black,
+    0 0 20px rgb(248, 83, 110),
+    0 0 40px rgb(248, 83, 110),
+    0 0 80px rgba(248, 83, 110, 0.7),
+    0 0 160px rgba(248, 83, 110, 0.5);
+  transform: scale(1.1);
+}
+
+
+footer {
+  background: #fce4ec;
+  color: #333;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-socials {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #d81b60;
+}
+
+
+@media (max-width: 768px) {
+
+
+  nav {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  header h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  header p {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    width: 90%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+
+  .item h3 {
+    font-size: 18px;
+  }
+
+  .item p {
+    font-size: 14px;
+  }
+
+  footer {
+    padding: 15px 10px;
+    font-size: 14px;
+    text-align: center;
+  }
 }

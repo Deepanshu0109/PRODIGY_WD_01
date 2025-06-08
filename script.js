@@ -2,7 +2,8 @@ let displayBottle = document.getElementById("p1");
 let bottles = document.querySelectorAll(".products");
 let bottleBG = document.getElementById("displayBG2");
 let belowBG = document.getElementById("displayBG");
-
+const card1 = document.querySelector(".newCard1");
+const card2 = document.querySelector(".newCard2");
 
 bottles.forEach(products => {
     products.addEventListener("click", function () {
