@@ -126,7 +126,8 @@ nav a:hover::after {
   background: radial-gradient(white, palevioletred);
 }
 
-nav a, .items img {
+nav a,
+.items img {
   will-change: transform;
 }
 
@@ -570,57 +571,296 @@ footer a:hover {
   color: #d81b60;
 }
 
-
 @media (max-width: 768px) {
-
+  header {
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+  }
 
   nav {
-    align-items: flex-start;
-    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
   }
 
   nav a {
-    font-size: 16px;
-    margin: 5px 0;
+    font-size: 1.1rem;
+    padding: 5px 10px;
   }
 
-  .logo {
-    font-size: 24px;
-  }
-
-  header h1 {
-    font-size: 32px;
+  .homeSpace {
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
   }
 
-  header p {
-    font-size: 16px;
-    text-align: center;
-    padding: 0 10px;
+  #p1 {
+    padding: 30px 0 0 40px;
+    width: 90%;
+    height: 350px;
   }
 
   .items {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
   }
 
-  .item {
-    width: 90%;
+  .items img {
+    width: 100px;
+    height: auto;
+
+  }
+
+  .imageContainer {
+    width: 100%;
     max-width: 300px;
-    margin: 10px 0;
+    height: auto;
   }
 
-  .item h3 {
-    font-size: 18px;
+  #displayBG,
+  #displayBG2 {
+    border-left: 7px solid black;
+    width: 125%;
+    height: 180px;
+    border-radius: 0 100px 100px 0;
   }
 
-  .item p {
-    font-size: 14px;
+  .content h1 {
+    font-size: 2.3rem;
   }
 
-  footer {
-    padding: 15px 10px;
-    font-size: 14px;
+  .content h4 {
+    font-size: 1.3rem;
+  }
+
+  .content p {
+    font-size: 1.1rem;
+  }
+
+  #new h1,
+  #ourStory h1,
+  .testimonials h1 {
+    font-size: 2.2rem;
+  }
+
+  #new h2 {
+    font-size: 1.6rem;
+  }
+
+  .newCard1,
+  .newCard2 {
+    margin: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .newItem img {
+    width: 100px;
+    height: 100px;
+    border-radius: 0 30px;
+    padding: 20px;
+  }
+
+  .newItem2 img {
+    width: 100px;
+    height: 100px;
+    border-radius: 30px 0;
+    padding: 20px;
+  }
+
+  .storyContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  #natureBG {
+    width: 300px;
+    border-radius: 0;
+  }
+
+  #natureBottle {
+    width: 180px;
+    height: auto;
+  }
+
+  .storyContainer {
+    width: 650px;
+    height: 650px;
+    margin: auto;
+  }
+
+  .storyText p {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+
+  .tContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .tCard {
+    width: 40%;
+    height: 30%;
     text-align: center;
+  }
+
+  .tCard img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .tComment p {
+    font-size: 0.7rem;
+  }
+
+  .tComment h2 {
+    font-size: 1.2rem;
+  }
+
+  .CTAbutton h1 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  nav {
+    gap: 8px;
+    padding: 8px 0;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 4px 8px;
+  }
+
+  .homeSpace {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  #p1 {
+    padding: 20px 0 0 20px;
+    width: 55%;
+    height: 150px;
+  }
+
+  .items img {
+    width: 80px;
+  }
+
+  #displayBG,
+  #displayBG2 {
+    width: 320px;
+    height: 100px;
+    border-left: 5px solid black;
+    border-radius: 10px;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content h4 {
+    font-size: 1.1rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  #new h1,
+  #ourStory h1,
+  .testimonials h1 {
+    font-size: 2rem;
+  }
+
+  #new h2 {
+    font-size: 2rem;
+  }
+
+  .newCard1,
+  .newCard2 {
+    margin: 20px;
+    gap: 10px;
+  }
+
+
+  .newItem img,
+  .newItem2 img {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .storyContainer {
+    width: 100%;
+    height: auto;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .ourStory {
+    border-bottom: 0px;
+  }
+
+  #natureBG {
+    width: 250px;
+
+  }
+
+  #natureBottle {
+    width: 140px;
+  }
+
+  .storyText p {
+    font-size: 1rem;
+    padding: 0 5px;
+  }
+
+  .tContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px;
+  }
+
+  .tCard {
+    width: 35%;
+    height: 30%;
+    text-align: center;
+  }
+
+  .tCard img {
+    width: 30px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .tComment p {
+    text-align: left;
+    font-size: 0.4em;
+  }
+
+  .tComment h4 {
+    font-size: 0.7rem;
+  }
+
+  .CTAbutton h1 {
+    font-size: 0.9rem;
   }
 }
