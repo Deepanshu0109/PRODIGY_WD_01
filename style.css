@@ -66,15 +66,15 @@ nav a::after {
   bottom: -2px;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, white, pink);
+  background: linear-gradient(to right,  #1a1a40, rgb(248, 83, 110));
   transition: width 0.3s ease, left 0.3s ease;
 }
 
 
 nav a:hover {
   transform: scale(1.1) translateY(-2px);
-  color: #d81b60;
-  text-shadow: 0px 0px 10px pink;
+  color: rgb(248, 83, 110);
+  text-shadow: 2px 2px 2px #1a1a40;
   transform: translateY(-2px);
 }
 
@@ -139,7 +139,7 @@ nav a,
 
 @keyframes appearLeftToRight {
   from {
-    transform: translateX(-100%);
+    transform: translateX(100%);
     opacity: 0;
   }
 
@@ -180,7 +180,7 @@ nav a,
 
 @keyframes drop {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(100%);
     opacity: 0;
   }
 
